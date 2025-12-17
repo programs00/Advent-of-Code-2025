@@ -10,7 +10,6 @@ void getNumbers(const vector<string>& ops) {
     long long sum = 0;
     long long prod = 1;
     for(int i = 0; i < m; i++){
-        vector<int> num;
         long long value = 0;
         if(ops[n][i] == '+' || ops[n][i] == '*') {
             op = ops[n][i];
@@ -32,14 +31,6 @@ void getNumbers(const vector<string>& ops) {
         }
         if(op == '+') sum += value;
         else if(op == '*') prod *= value;
-
-        if(j == n && i == m-1){
-        if(sum != 0) nums.push_back(sum);
-        if(prod != 0) nums.push_back(prod);}
-        // if(i == m-1){
-        //     if(op == '+') nums.push_back(sum);
-        //     else if(op == '*') nums.push_back(prod);
-        // }
     }
    
 }
